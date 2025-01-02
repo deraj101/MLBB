@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+}
+
+* {
+    box-sizing: border-box;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+/*HEADER STYLES*/
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    background-color: rgba(4, 6, 8, 0.7);
+    backdrop-filter: blur(1.5px);
+}
+
+header img {
+    width: 150px;   
+}
+
+header nav ul {
+     list-style: none;
+     display: flex;
+}
+
+header nav ul li {
+    margin: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+
+    &:hover {
+        color: #d9983e;
+        transition: 0.7s ease;
+    }
+}
+
+header nav ul li a.active {
+    color: #d9983e;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgba(4, 6, 8, 0.7);
+    padding: 1px;
+    z-index: 1;
+    border-radius: 10px;
+    backdrop-filter: blur(0.5px);
+}
+
+.dropdown-symbol {
+    color: #d9983e;
+    margin-left: 5px;
+    font-size: 0.6rem;
+}
+
+header nav ul li:hover {
+   .dropdown {
+          display: block;
+   } 
+
+   .dropdown li {
+          width: 90px;
+          background: none;
+    }
+
+    .dropdown li a {
+          padding: 3px;
+          background: none;
+    }
+}
+
+/*FOOTER STYLES*/
+footer {
+    text-align: center;  
+    border-top: 2px solid #d9983e; 
+    padding: 10px;
+    border-radius: 100px 100px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons i {
+    margin: 5px;
+
+    &:hover {
+        color: #d9983e;
+        transform: scale3d(1.5,1.5,1.5);
+        transition: 0.6s ease, transform 0.6s;
+        cursor: pointer;
+    }
+}
+
+footer p {
+    color: gray;
+    margin-top: 15px;
+    font-size: small;
+    margin-bottom: 20px;
+}
+
+/* Home1 Section */
+.home1 {
+    position: relative; /* Ensure the intro text is positioned relative to the image */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    overflow: hidden; /* Prevent overflow of the image */
+}
+
+.home1 img {
+    width: 100%; /* Ensure the image covers the entire section */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+}
+
+.intro {
+    position: absolute; /* Position the text over the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    text-align: center; /* Center-align the text */
+    background-color: rgba(67, 87, 108, 0.4); /* Semi-transparent background */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 15px; /* Rounded corners */
+    backdrop-filter: blur(1px); /* Add a blur effect to the background */
+}
+
+.intro span {
+    font-size: 2.5rem; /* Set a larger font size for the text */
+    font-weight: bold;
+    display: inline-block; /* Ensure each span is treated as a block */
+    opacity: 0; /* Start with hidden text */
+    transform: translateY(30px); /* Start with text slightly below */
+    animation: SlideIn 2s forwards; /* Apply the animation */
+}
+
+.intro span:first-child {
+    color: #d9983e; /* Highlight the first letter */
+    font-size: 5.8rem; /* Larger font size for the first letter */
+    font-style: italic; /* Italicize the first letter */
+    font-weight: bolder; /* Bold the first letter */
+}
+
+/* Animation Keyframes */
+@keyframes SlideIn {
+    to {
+        opacity: 1; /* Fade in the text */
+        transform: translateY(0); /* Move text to its final position */
+    }
+}
+
+/* Animation Delays */
+.intro span:nth-child(1) { animation-delay: 0s; }
+.intro span:nth-child(2) { animation-delay: 0.2s; }
+.intro span:nth-child(3) { animation-delay: 0.4s; }
+.intro span:nth-child(4) { animation-delay: 0.6s; }
+.intro span:nth-child(5) { animation-delay: 0.8s; }
+.intro span:nth-child(6) { animation-delay: 1s; }
+.intro span:nth-child(7) { animation-delay: 1.2s; }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+   
+}
+/* Home2 Section */
+.home2 {
+    background-color: rgba(67, 87, 108, 0.4);
+    text-align: center; /* Center-align the heading and content */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.home2 h2 {
+    margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.game-modes {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center-align the cards */
+    gap: 20px; /* Add consistent spacing between cards */
+}
+
+.classic, .ranked, .brawl, .vs_ai, .custom, .arcade {
+    width: 175px; /* Set a fixed width for all cards */
+    background-color: rgba(67, 87, 108, 0.4); /* Background color */
+    padding: 15px; /* Add padding inside the cards */
+    border-radius: 15px; /* Rounded corners */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center-align content */
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s ease; /* Add hover effect */
+}
+
+.classic:hover, .ranked:hover, .brawl:hover, .vs_ai:hover, .custom:hover, .arcade:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.classic img, .ranked img, .brawl img, .vs_ai img, .custom img, .arcade img {
+    width: 100%; /* Ensure images fill the card width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.classic p, .ranked p, .brawl p, .vs_ai p, .custom p, .arcade p {
+    font-size: 1rem; /* Set consistent font size */
+    font-weight: bold; /* Bold text */
+    margin-top: 10px; /* Add spacing above the text */
+}
+/* Home3 Section */
+.home3 {
+    position: relative;
+    background-image: url('assets/img/M6logo.png');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    color: white;
+}
+
+.m6-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.m6-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.m6-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.m6-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.m6-image {
+    flex: 1;
+    text-align: right;
+}
+
+.m6-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* About Section Styles */
+.about {
+    display: flex;
+    flex-direction: column; /* Stack heading and cards vertically */
+    align-items: center; /* Center-align the content */
+    gap: 20px; /* Add spacing between heading and cards */
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.about h1 {
+    border-bottom: 2px solid #d9983e; /* Add a border under the heading */
+    font-size: 1.7rem; /* Larger font size for the heading */
+    color: #d9983e; /* Highlight color */
+    text-align: center;
+}
+
+.about-cards {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center-align the cards */
+    gap: 30px; /* Add consistent spacing between cards */
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-card {
+    flex: 1 1 calc(33.333% - 40px); /* Allow cards to grow and shrink, with a base width of 33.333% minus the gap */
+    background-color: rgba(67, 87, 108, 0.4);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    min-width: 250px; /* Minimum width for each card */
+    max-width: 300px; /* Maximum width for each card */
+    opacity: 0;
+    animation: FadeIn 1.5s ease forwards; /* Apply fade-in effect */
+}
+
+.about-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.about-cards p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.about-card:nth-child(1) { animation-delay: 0.2s; }
+.about-card:nth-child(2) { animation-delay: 0.4s; }
+.about-card:nth-child(3) { animation-delay: 0.6s; }
+
+/*heroes styles*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0 ;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    width: 180px;
+    margin: 5px;
+    background-color: #333;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    
+    &:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+}
+
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+.card:nth-child(5) { animation-delay: 1s; }
+.card:nth-child(6) { animation-delay: 1.2s; }
+.card:nth-child(7) { animation-delay: 1.4s; }
+.card:nth-child(8) { animation-delay: 1.6s; }
+.card:nth-child(9) { animation-delay: 1.8s; }
+.card:nth-child(10) { animation-delay: 2s; }
+.card:nth-child(11) { animation-delay: 2.2s; }
+.card:nth-child(12) { animation-delay: 2.4s; }
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .name {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    font-size: 1rem; /* Adjust font size as needed */
+    font-weight: 300;
+    text-align: center; /* Center-align the text */
+}
+
+/*Responsive Styles*/
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 5px;
+    }
+
+    header nav ul li a {
+        font-size: small;
+        border-right: 2px solid #d9983e;
+        padding-right: 6px;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    .dropdown {
+        margin-top: 0;
+    }
+
+    .dropdown li a {
+        border-right: none;
+    }
+
+    .home1 img {
+        width: 100%;
+    }
+
+    .intro {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .intro span {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        font-weight: bold;
+    }
+
+    .intro span:first-child {
+        font-size: 2rem; /* Adjust first letter size for smaller screens */
+        font-weight: bolder;
+    }
+
+    .game-modes {
+        gap: 15px; /* Reduce spacing on smaller screens */
+    }
+
+    .classic, .ranked, .brawl, .vs_ai, .custom, .arcade {
+        width: 120px; /* Reduce card width on smaller screens */
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .classic p, .ranked p, .brawl p, .vs_ai p, .custom p, .arcade p {
+        font-size: 0.9rem; /* Reduce font size on smaller screens */
+    }
+
+    .m6-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .m6-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .m6-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .m6-image {
+        text-align: center;
+    }
+
+    .about {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .about-card {
+        flex: 1 1 calc(50% - 20px); /* Adjust card width for smaller screens */
+    }
+
+    .about-cards {
+        padding: 10px; /* Reduce padding on smaller screens */
+        gap: 15px; /* Reduce spacing between cards on smaller screens */
+    }
+
+    .about h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .about-cards p {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    .card {
+        width: 100px;
+        margin: 5px;
+    }
+
+    .card .name {
+        font-size: 0.8rem;
+    }
+
+    footer {
+        padding: 5px;
+    }
+
+    footer p {
+        font-size: x-small;
+    }
+}
+
