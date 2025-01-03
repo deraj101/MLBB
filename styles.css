@@ -111,58 +111,57 @@ footer p {
     margin-bottom: 20px;
 }
 
-/* Home1 Section */
+/* Home1 Section  */
 .home1 {
-    position: relative; /* Ensure the intro text is positioned relative to the image */
+    position: relative;  
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    overflow: hidden; /* Prevent overflow of the image */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .home1 img {
-    width: 100%; /* Ensure the image covers the entire section */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove extra space below the image */
+    width: 100%; 
+    height: auto; 
+    display: block; 
 }
 
 .intro {
-    position: absolute; /* Position the text over the image */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for exact centering */
-    text-align: center; /* Center-align the text */
-    background-color: rgba(67, 87, 108, 0.4); /* Semi-transparent background */
-    padding: 20px; /* Add padding for spacing */
-    border-radius: 15px; /* Rounded corners */
-    backdrop-filter: blur(1px); /* Add a blur effect to the background */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    background-color: rgba(67, 87, 108, 0.4); 
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(1px); 
 }
 
 .intro span {
-    font-size: 2.5rem; /* Set a larger font size for the text */
+    font-size: 2.5rem; 
     font-weight: bold;
-    display: inline-block; /* Ensure each span is treated as a block */
-    opacity: 0; /* Start with hidden text */
-    transform: translateY(30px); /* Start with text slightly below */
-    animation: SlideIn 2s forwards; /* Apply the animation */
+    display: inline-block; 
+    opacity: 0; 
+    transform: translateY(30px);
+    animation: SlideIn 2s forwards;
 }
 
 .intro span:first-child {
-    color: #d9983e; /* Highlight the first letter */
-    font-size: 5.8rem; /* Larger font size for the first letter */
-    font-style: italic; /* Italicize the first letter */
-    font-weight: bolder; /* Bold the first letter */
+    color: #d9983e; 
+    font-size: 5.8rem; 
+    font-style: italic; 
+    font-weight: bolder; 
 }
 
-/* Animation Keyframes */
+
 @keyframes SlideIn {
     to {
-        opacity: 1; /* Fade in the text */
-        transform: translateY(0); /* Move text to its final position */
+        opacity: 1; 
+        transform: translateY(0); 
     }
 }
 
-/* Animation Delays */
 .intro span:nth-child(1) { animation-delay: 0s; }
 .intro span:nth-child(2) { animation-delay: 0.2s; }
 .intro span:nth-child(3) { animation-delay: 0.4s; }
@@ -171,54 +170,50 @@ footer p {
 .intro span:nth-child(6) { animation-delay: 1s; }
 .intro span:nth-child(7) { animation-delay: 1.2s; }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-   
-}
 /* Home2 Section */
 .home2 {
     background-color: rgba(67, 87, 108, 0.4);
-    text-align: center; /* Center-align the heading and content */
-    padding: 20px; /* Add padding for spacing */
+    text-align: center; 
+    padding: 20px; 
 }
 
 .home2 h2 {
-    margin-bottom: 20px; /* Add spacing below the heading */
+    margin-bottom: 20px; 
 }
 
 .game-modes {
-    display: flex; /* Use flexbox for layout */
-    flex-wrap: wrap; /* Allow wrapping of cards */
-    justify-content: center; /* Center-align the cards */
-    gap: 20px; /* Add consistent spacing between cards */
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px;
 }
 
 .classic, .ranked, .brawl, .vs_ai, .custom, .arcade {
-    width: 175px; /* Set a fixed width for all cards */
-    background-color: rgba(67, 87, 108, 0.4); /* Background color */
-    padding: 15px; /* Add padding inside the cards */
-    border-radius: 15px; /* Rounded corners */
-    display: flex; /* Use flexbox for internal layout */
-    flex-direction: column; /* Stack image and text vertically */
-    align-items: center; /* Center-align content */
-    text-align: center; /* Center-align text */
-    transition: transform 0.3s ease; /* Add hover effect */
+    width: 175px; 
+    background-color: rgba(67, 87, 108, 0.4);
+    padding: 15px; 
+    border-radius: 15px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    text-align: center; 
+    transition: transform 0.3s ease; 
 }
 
 .classic:hover, .ranked:hover, .brawl:hover, .vs_ai:hover, .custom:hover, .arcade:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05); 
 }
 
 .classic img, .ranked img, .brawl img, .vs_ai img, .custom img, .arcade img {
-    width: 100%; /* Ensure images fill the card width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners for images */
+    width: 100%;
+    height: auto; 
+    border-radius: 10px;
 }
 
 .classic p, .ranked p, .brawl p, .vs_ai p, .custom p, .arcade p {
-    font-size: 1rem; /* Set consistent font size */
-    font-weight: bold; /* Bold text */
-    margin-top: 10px; /* Add spacing above the text */
+    font-size: 1rem; 
+    font-weight: bold;
+    margin-top: 10px; 
 }
 /* Home3 Section */
 .home3 {
@@ -267,26 +262,26 @@ footer p {
 /* About Section Styles */
 .about {
     display: flex;
-    flex-direction: column; /* Stack heading and cards vertically */
-    align-items: center; /* Center-align the content */
-    gap: 20px; /* Add spacing between heading and cards */
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px; 
     padding: 20px;
     margin-bottom: 30px;
 }
 
 .about h1 {
-    border-bottom: 2px solid #d9983e; /* Add a border under the heading */
-    font-size: 1.7rem; /* Larger font size for the heading */
-    color: #d9983e; /* Highlight color */
+    border-bottom: 2px solid #d9983e; 
+    font-size: 1.7rem; 
+    color: #d9983e;
     text-align: center;
 }
 
 .about-cards {
     margin-top: 10px;
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping of cards */
-    justify-content: center; /* Center-align the cards */
-    gap: 30px; /* Add consistent spacing between cards */
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 30px;
 }
 
 @keyframes FadeIn {
@@ -301,20 +296,20 @@ footer p {
 }
 
 .about-card {
-    flex: 1 1 calc(33.333% - 40px); /* Allow cards to grow and shrink, with a base width of 33.333% minus the gap */
+    flex: 1 1 calc(33.333% - 40px);
     background-color: rgba(67, 87, 108, 0.4);
     padding: 15px;
     border-radius: 15px;
     text-align: center;
     transition: transform 0.3s ease;
-    min-width: 250px; /* Minimum width for each card */
-    max-width: 300px; /* Maximum width for each card */
+    min-width: 250px; 
+    max-width: 300px; 
     opacity: 0;
-    animation: FadeIn 1.5s ease forwards; /* Apply fade-in effect */
+    animation: FadeIn 1.5s ease forwards;
 }
 
 .about-card:hover {
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.05); 
 }
 
 .about-cards p {
@@ -376,6 +371,30 @@ footer p {
 .card:nth-child(10) { animation-delay: 2s; }
 .card:nth-child(11) { animation-delay: 2.2s; }
 .card:nth-child(12) { animation-delay: 2.4s; }
+.card:nth-child(13) { animation-delay: 2.6s; }
+.card:nth-child(14) { animation-delay: 2.8s; }
+.card:nth-child(15) { animation-delay: 3s; }
+.card:nth-child(16) { animation-delay: 3.2s; }
+.card:nth-child(17) { animation-delay: 3.4s; }
+.card:nth-child(18) { animation-delay: 3.6s; }
+.card:nth-child(19) { animation-delay: 3.8s; }
+.card:nth-child(20) { animation-delay: 4s; }
+.card:nth-child(21) { animation-delay: 4.2s; }
+.card:nth-child(22) { animation-delay: 4.4s; }
+.card:nth-child(23) { animation-delay: 4.6s; }
+.card:nth-child(24) { animation-delay: 4.8s; }
+.card:nth-child(25) { animation-delay: 5s; }
+.card:nth-child(26) { animation-delay: 5.2s; }
+.card:nth-child(27) { animation-delay: 5.4s; }
+.card:nth-child(28) { animation-delay: 5.6s; }
+.card:nth-child(29) { animation-delay: 5.8s; }
+.card:nth-child(30) { animation-delay: 6s; }
+.card:nth-child(31) { animation-delay: 6.2s; }
+.card:nth-child(32) { animation-delay: 6.4s; }
+.card:nth-child(33) { animation-delay: 6.6s; }
+.card:nth-child(34) { animation-delay: 6.8s; }
+.card:nth-child(35) { animation-delay: 7s; }
+.card:nth-child(36) { animation-delay: 7.2s; }
 
 .card img {
     width: 100%;
@@ -389,11 +408,111 @@ footer p {
     left: 0;
     right: 0;
     padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
-    font-size: 1rem; /* Adjust font size as needed */
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 0 0 10px 10px; 
+    font-size: 1rem;
     font-weight: 300;
-    text-align: center; /* Center-align the text */
+    text-align: center; 
+}
+
+/*Highlights Styles*/
+
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.video-card {
+    width: 250px;
+    background-color: rgba(67, 87, 108, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px 15px 0 0;
+}
+
+.card-content {
+    padding: 10px;
+    background-color: rgba(4, 6, 8, 0.7);
+    border-radius: 0 0 15px 15px;
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+.title-date {
+    margin-bottom: 10px;
+}
+
+.video-title {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+}
+
+.date-uploaded {
+    font-size: 0.8rem;
+    color: gray;
+    margin-top: 5px;
+    display: block;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-size: 0.9rem;
+    color: white;
+    font-weight: bold;
+}
+
+.likes-comments-shares {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.metric {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.metric i {
+    margin-right: 5px;
+    color: #d9983e;
+}
+
+.metric span {
+    font-weight: bold;
 }
 
 /*Responsive Styles*/
@@ -434,30 +553,30 @@ footer p {
     }
 
     .intro {
-        padding: 15px; /* Reduce padding on smaller screens */
+        padding: 15px;
     }
 
     .intro span {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        font-size: 1.2rem; 
         font-weight: bold;
     }
 
     .intro span:first-child {
-        font-size: 2rem; /* Adjust first letter size for smaller screens */
+        font-size: 2rem; 
         font-weight: bolder;
     }
 
     .game-modes {
-        gap: 15px; /* Reduce spacing on smaller screens */
+        gap: 15px;
     }
 
     .classic, .ranked, .brawl, .vs_ai, .custom, .arcade {
-        width: 120px; /* Reduce card width on smaller screens */
-        padding: 10px; /* Reduce padding on smaller screens */
+        width: 120px;
+        padding: 10px; 
     }
 
     .classic p, .ranked p, .brawl p, .vs_ai p, .custom p, .arcade p {
-        font-size: 0.9rem; /* Reduce font size on smaller screens */
+        font-size: 0.9rem; 
     }
 
     .m6-content {
@@ -479,24 +598,24 @@ footer p {
     }
 
     .about {
-        padding: 10px; /* Reduce padding on smaller screens */
+        padding: 10px; 
     }
 
     .about-card {
-        flex: 1 1 calc(50% - 20px); /* Adjust card width for smaller screens */
+        flex: 1 1 calc(50% - 20px); 
     }
 
     .about-cards {
-        padding: 10px; /* Reduce padding on smaller screens */
-        gap: 15px; /* Reduce spacing between cards on smaller screens */
+        padding: 10px; 
+        gap: 15px; 
     }
 
     .about h1 {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        font-size: 1.5rem; 
     }
 
     .about-cards p {
-        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        font-size: 0.9rem; 
     }
 
     .card {
