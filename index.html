@@ -23,6 +23,24 @@ h6 {
     font-family: 'Montserrat';
 }
 
+@keyframes borderLoading {
+    0% {
+        border-color: rgb(230, 100, 100);
+    }
+    25% {
+        border-color: yellow;
+    }
+    50% {
+        border-color: rgb(67, 204, 219);
+    }
+    75% {
+        border-color: rgb(189, 114, 223);
+    }
+    100% {
+        border-color: rgb(244, 243, 243);
+    }
+}
+
 h6 a {
     text-decoration: none;
     color: white;
@@ -30,12 +48,15 @@ h6 a {
     border-radius: 15px;
     background-color: rgba(34, 46, 57, 0.7);
     backdrop-filter: blur(1px);
+    border: 2px solid transparent; 
+    animation: borderLoading 3s infinite;
 }
 
 h6 a:hover {
     background-color: black;
     color: rgb(218, 187, 61);
     transition: 0.7s;
+    animation: none;
 }
 
 #bg-video {
