@@ -327,6 +327,7 @@ footer p {
 .g4 span:nth-child(7) { animation-delay: 2.1s;}
 .g4 span:nth-child(8) { animation-delay: 2.4s;}
 .g4 span:nth-child(9) { animation-delay: 2.7s;}
+.g4 span:nth-child(10) { animation-delay: 3s;}
 
 
 
@@ -379,10 +380,6 @@ footer p {
     animation: FadeIn 1.5s ease forwards;
 }
 
-.about-card:hover {
-    transform: scale(1.05); 
-}
-
 .about-cards p {
     font-size: 1rem;
     margin-top: 10px;
@@ -409,7 +406,7 @@ footer p {
         transform: translateY(0);
     }
 }
-
+/*Heroes*/
 .card {
     width: 180px;
     height: 250px;
